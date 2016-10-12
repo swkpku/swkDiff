@@ -1,0 +1,3 @@
+Hello, every one.
+This is a test file.
+Thank you.
