@@ -1,0 +1,2 @@
+1. run "g++ swk_diff.cc -o swk_diff -std=c++11"
+2. run "./swk_diff text1.txt text2.txt"
