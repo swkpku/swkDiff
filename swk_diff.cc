@@ -5,15 +5,6 @@
 
 using namespace std;
 
-string symbol(int a) {
-  string left = " → ";
-  string up = " ↓ ";
-  string left_up = " ↘ ";
-  if (a == 1) return left;
-  if (a == 2) return up;
-  if (a == 3) return left_up;
-  return " * ";
-}
 int main(int argc, char* argv[]) {
   // read two text file name
   string text1 = argv[1];
@@ -105,12 +96,6 @@ int main(int argc, char* argv[]) {
   reverse(result.begin(), result.end());
   for (auto& str : result) {
     cout << str << endl;
-  }
-  for (int i = 0; i <= len2; i++) {
-    for (int j = 0; j <= len1; j++) {
-      cout << symbol(state[j][i]);
-    }
-    cout << endl;
   }
   return 0;
 }
