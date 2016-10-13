@@ -5,13 +5,3 @@ b
 d
 a
 b
-a
-a
-a
-a
-a
-a
-a
-c
-a
-b

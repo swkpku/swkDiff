@@ -1,2 +1,29 @@
 1. run "g++ swk_diff.cc -o swk_diff -std=c++11"
 2. run "./swk_diff text1.txt text2.txt"
+
+# Algorithm 
+
+str1: abcbdab 
+str2: bdcaba
+
+str2 is a modification of str1.
+
+edit graph:
+
+   a  b  c  b  d  a  b
+b  ↓  ↘  →  ↘  →  →  ↘ 
+
+d  ↓  ↓  ↓  ↓  ↘  →  → 
+
+c  ↓  ↓  ↘  →  ↓  ↓  ↓ 
+
+a  ↘  ↓  ↓  ↓  ↓  ↘  → 
+
+b  ↓  ↘  ↓  ↘  →  ↓  ↘ 
+
+a  ↘  ↓  ↓  ↓  ↓  ↘  ↓ 
+
+start from the right-bottom corner of the edit graph to track the optimal path:
+1. encounter a "↓" means that there is a insert operation.
+2. encounter a "→" means that there is a delete operation.
+3. encounter a "↘ " means that there is a match between str1 and str2.
